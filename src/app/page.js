@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-   <div className="w-full flex-col items-center relative">
+    <div className="w-full flex-col items-center relative">
       {/* Header */}
       <div className="flex flex-row items-center justify-between w-full max-width fixed top-12 left-1/2 -translate-x-[50%]">
         <Link href="/">
@@ -14,18 +14,25 @@ export default function Home() {
           <Link href="/">
             Projects
           </Link>
-           <Link href="/">
+          <Link href="/">
             Careers
           </Link>
-           <Link href="/">
+          <Link href="/">
             Services
           </Link>
-           <Link href="/">
+          <Link href="/">
             Contact US
           </Link>
         </div>
         {/* Nav Button */}
+        <div className="text-black cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="20" viewBox="0 0 40 20" fill="none">
+            <rect width="40" height="4" rx="1" fill="currentColor" />
+            <rect y="8" width="40" height="4" rx="1" fill="currentColor" />
+            <rect y="16" width="40" height="4" rx="1" fill="currentColor" />
+          </svg>
+        </div>
       </div>
-   </div>
+    </div>
   );
 }
