@@ -7,7 +7,7 @@ import "swiper/css/navigation";
 import { Navigation } from "swiper/modules";
 import Link from "next/link";
 
-export default function SimpleSwiper({ data }) {
+export default function Slider({ data }) {
     const prevRef = useRef(null);
     const nextRef = useRef(null);
     const [isReady, setIsReady] = useState(false);

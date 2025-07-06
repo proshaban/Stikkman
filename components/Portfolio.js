@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Slider from "./slider";
 import Image from "next/image";
+import Slider from "./slider";
 
 const porfolioData = [
     {
@@ -81,7 +81,6 @@ export default function Porfolio() {
 
             {/* Slider */}
             <Slider data={data} />
-
             {/* Button */}
             <div className="button-fill flex items-center gap-2 py-3 px-6 border-2 border-[var(--color-3)] text-base cursor-pointer z-3 rounded-full text-[var(--color-3)] mt-6">
                 <svg
