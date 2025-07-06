@@ -1,14 +1,7 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 * 
 {
-  padding: 0;
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -18,7 +11,13 @@
   }
 }
 
-/* custom class */
+/* custom class & veriables */
+:root {
+  --color-1:#161616;
+  --color-2: #8667CE;
+  --color-3: #6740AB;
+}
+
 .font-1 
 {
   font-family: var(--font-poppins);
@@ -27,7 +26,71 @@
 {
   font-family: var(--font-aleo);
 }
+.font-3 
+{
+  font-family: var(--font-leagueSpartan);
+}
 .max-width 
 {
   max-width: 1440px;
+}
+
+.swiper-slide .swiper-slide-prev
+{
+  transform: rotateY(45deg) !important;
+}
+.swiper-slide .swiper-slide-next
+{
+  transform: rotateY(-45deg) !important;
+}
+
+.button-fill {
+  position: relative;
+  background-color: white;
+  overflow: hidden;
+  transition: color 0.4s ease;
+}
+
+.button-fill::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-1);
+  z-index: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease-out;
+  border-radius: 9999px;
+}
+
+.button-fill:hover::before {
+  transform: scaleX(1);
+}
+
+.button-fill:hover {
+  color: var(--color-3); /* reveal colored text */
+}
+
+.cta {
+  position: relative;
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.cta::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: white;
+  transition: width 0.3s ease, left 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.cta:hover::after {
+  width: 100%;
+  left: 50%;
 }
