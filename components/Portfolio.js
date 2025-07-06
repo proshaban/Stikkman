@@ -1,5 +1,4 @@
 import { useState } from "react";
-import Image from "next/image";
 import Slider from "./slider";
 
 const porfolioData = [
@@ -25,7 +24,7 @@ const porfolioData = [
     },
 ];
 
-export default function Porfolio() {
+const Porfolio = () => {
     const [selectedTitle, setSelectedTitle] = useState(porfolioData[0].title);
     const [data, setData] = useState(porfolioData[0].data);
 
@@ -80,7 +79,7 @@ export default function Porfolio() {
             </div>
 
             {/* Slider */}
-            <Slider data={data} />
+             <Slider data={data} />
             {/* Button */}
             <div className="button-fill flex items-center gap-2 py-3 px-6 border-2 border-[var(--color-3)] text-base cursor-pointer z-3 rounded-full text-[var(--color-3)] mt-6">
                 <svg
@@ -104,3 +103,5 @@ export default function Porfolio() {
         </div>
     );
 }
+
+export default Porfolio;
