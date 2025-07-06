@@ -37,7 +37,7 @@ const Porfolio = () => {
     };
 
     return (
-        <div className="w-full py-[200px] flex flex-col items-center">
+        <div className="w-full py-[100px] md:py-[200px] flex flex-col items-center">
             {/* section heading */}
             <h2 className="text-5xl text-center text-white font-2 z-3 mb-6">
                 <span>Our</span>{" "}
@@ -65,7 +65,7 @@ const Porfolio = () => {
                 </div>
 
                 {/* Dropdown Options */}
-                <div className="absolute hidden group-hover:block w-44 rounded-md shadow-lg bg-black ring-1 ring-white/10 z-50 text-center left-[-25%]">
+                <div className="absolute hidden group-hover:block w-44 rounded-md shadow-lg bg-black ring-1 ring-white/10 z-50 text-center left-[50%] translate-x-[-50%]">
                     {porfolioData.map((item) => (
                         <div
                             key={item.title}
